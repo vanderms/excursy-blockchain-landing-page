@@ -8,8 +8,6 @@ export const Navbar: React.FC = () => {
   const closeSidebar = () => setSidebar({ open: false });
   const openSidebar = () => setSidebar({ open: true });
 
-  
-
   return (
     <nav className="nv__navbar">
       <Link href='/'>
