@@ -15,3 +15,8 @@ $breakpoints: (
     @content;
   }
 }
+
+
+@mixin container {
+  padding-inline: max(4.2666667%, calc(50vw - 600px));
+}

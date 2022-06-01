@@ -1,5 +1,6 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { Navbar } from '../components/navbar/navbar';
 
 const Home: NextPage = () => {
   return (
@@ -8,7 +9,7 @@ const Home: NextPage = () => {
         <title>Excursy - Blockchain Tech</title>       
         <link rel="icon" type="image/png" href="./ico.png" />
       </Head>
-
+      <Navbar/>
       
     </>
   )
