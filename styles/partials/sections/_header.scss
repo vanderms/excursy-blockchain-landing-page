@@ -5,12 +5,25 @@
   margin-top: 50px;
   @include container;
 
+  @include media(laptop) {    
+    margin-top: 128px;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    column-gap: 90px;
+  }
+
   .title {
     font-weight: 800;
     font-size: 36px;
     line-height: 130%;
     color: var(--dark-black);
     text-align: center;
+
+    @include media(laptop) {
+      font-size: 56px;
+      text-align: left;
+    }
 
     strong {
       color: var(--primary);
@@ -24,10 +37,20 @@
     line-height: 180%;
     color: var(--dark-gray);
     text-align: center;
+
+    @include media(laptop) {
+      margin-top: 36px;
+      text-align: left;
+      font-size: 18px;
+    }
   }
 
   .wrapper-image {
-    margin-top: 30px;
+    margin-top: 32px;
+
+    @include media(laptop) {
+      grid-area: 1 / 2 / 4 / 2;
+    }
   }
 
   .cta-container {
@@ -48,6 +71,12 @@
     font-size: 14px;
     color: var(--white);
     border-radius: var(--border-radius-md);
+
+    @include media(laptop) {
+      width: 208px;
+      height: 64px;
+      font-size: 16px;
+    }
   }
 
   .cta-secondary {
@@ -61,5 +90,11 @@
     font-weight: 700;
     font-size: 14px;
     color: var(--dark-black);
+
+    @include media(laptop) {
+      width: 208px;
+      height: 64px;
+      font-size: 16px;
+    }
   }
 }

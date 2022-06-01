@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Navbar } from '../components/navbar/navbar';
-import { Header } from '../containers/header/header';
+import { Header } from '../sections/header/header';
+import { SectionCompanies } from '../sections/section-companies/companies';
 
 const Home: NextPage = () => {
   return (
@@ -10,8 +11,12 @@ const Home: NextPage = () => {
         <title>Excursy - Blockchain Tech</title>       
         <link rel="icon" type="image/png" href="./ico.png" />
       </Head>
-      <Navbar/>
-      <Header/>
+      <Navbar />
+      <main>
+        <Header />
+        <SectionCompanies/>        
+      </main>
+      
     </>
   )
 }

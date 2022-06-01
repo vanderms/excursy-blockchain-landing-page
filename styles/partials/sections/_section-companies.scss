@@ -1,0 +1,25 @@
+@use '../mixins' as *;
+
+.nv__section-companies {
+  margin-top: 48px;
+  @include container;
+  display: grid;
+  grid-template-columns: 169fr 1fr 234fr 1fr 169fr 1fr 175fr;
+  justify-items: space-between;
+  align-items: center;
+  gap: 16px;
+
+  @include media(tablet){
+    margin-top: 80px;
+  }
+
+  @include media(laptop){
+    margin-top: 160px;
+
+    .sep{
+      height: 100%;
+      width: 0;
+      border-left: 1px solid #C0C5D2;
+    }
+  }
+}
