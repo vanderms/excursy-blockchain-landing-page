@@ -1,0 +1,136 @@
+@use '../mixins' as *;
+
+
+.nv__section-about {
+  padding-top: 24px;
+  @include container;
+
+  @include media(tablet) {
+    padding-top: 80px;
+  }
+
+  @include media(laptop) {
+    padding-top: 140px;
+    display: grid;
+    grid-template-columns: 546fr 639fr;
+    column-gap: 30px;
+  }
+
+  .title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--dark-black);
+    text-align: center;
+
+    @include media(laptop) {
+      font-size: 52px;
+      line-height: 130%;
+      text-align: left;
+    }
+  }
+
+  .description {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 180%;
+    text-align: center;
+    color: var(--dark-gray);
+
+    @include media(laptop) {
+      margin-top: 36px;
+      font-size: 20px;
+      line-height: 180%;
+      text-align: left;
+    }
+  }
+
+  .wrapper-image {
+    margin-top: 16px;
+
+    @include media(laptop) {
+      margin-top: 0;
+      display: grid;
+      place-content: center;
+      grid-area: 1 / 1 / 4 / 1;
+    }
+  }
+
+  .indicators-group {
+    margin-top: 16px;
+
+    @include media(laptop) {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      padding: 18px 0;
+    }
+  }
+
+  .indicator {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 30px;
+    padding-left: calc(50% - 110px);
+
+    @include media(laptop) {
+      flex-direction: column-reverse;
+      gap: 8px;
+      height: auto;
+    }
+  }
+
+  .indicator:not(:last-child)::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: min(100%, 360px);
+    margin: 0 max(0px, 50% - 180px) 0;
+    height: 0;
+    border-bottom: 2px solid var(--primary);
+
+    @include media(laptop) {
+      width: 0;
+      height: 80px;    
+      left: unset;
+      right: 0;
+      border-left: 2px solid var(--primary);
+    }
+  }
+
+  .indicator .value {
+    font-weight: 700;
+    font-size: 18px;
+    width: 64px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-shade);
+    color: var(--primary);
+    border-radius: var(--border-radius-sm);
+
+    @include media(laptop) {
+      background-color: unset;
+      font-size: 40px;
+      line-height: 55px;
+      width: auto;
+      height: auto;      
+    }
+  }
+
+  .indicator .text {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--dark-gray);
+
+    @include media(laptop) {
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
+
+}

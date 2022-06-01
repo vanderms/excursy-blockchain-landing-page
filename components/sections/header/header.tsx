@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
       <div className="cta-container">
         <Link href='/'>
           <a className="cta-primary">Get Started
-            <Image src='/assets/icon/arrow.svg' width={8} height={12}/>
+            <Image src='/assets/icon/arrow.svg' width={8} height={12} alt=''/>
           </a>     
         </Link>
         <Link href='/'>
