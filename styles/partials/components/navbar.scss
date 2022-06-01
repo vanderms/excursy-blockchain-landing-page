@@ -9,19 +9,32 @@
   justify-content: space-between;
   align-items: center;
 
+  @include media(laptop) {
+    margin-top: 56px;
+    height: 56px;
+  }
+
   .logo {
     display: flex;
     align-items: center;
     gap: 10px;
     font-weight: 700;
     font-size: 24px;
-    line-height: 33px;
     color: var(--dark-black);
+
+    @include media(laptop) {
+      font-size: 30px;
+      gap: 20px;
+    }
 
     .wrapper-image {
       width: 44px;
       display: grid;
       place-items: center;
+
+      @include media(laptop) {
+        width: 76px;
+      }
     }
   }
 
@@ -29,6 +42,10 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+
+    @include media(laptop) {
+      display: none;
+    }
   }
 
   .sidebar-mobile {
@@ -48,6 +65,15 @@
     &[data-open='true'] {
       right: 0;
     }
+
+    @include media(laptop) {
+      position: static;
+      flex-direction: row;
+      width: unset;
+      height: unset;
+      padding-inline: 0;
+      gap: 80px;
+    }
   }
 
   .close-btn {
@@ -59,6 +85,10 @@
     top: 32px;
     right: 24px;
     cursor: pointer;
+
+    @include media(laptop) {
+      display: none;
+    }
   }
 
   .backdrop {
@@ -70,6 +100,13 @@
 
     &[data-open='true'] {
       display: block;
+
+      @include media(laptop) {
+        display: none;
+      }
+    }
+    @include media(laptop) {
+      display: none;
     }
   }
 
@@ -79,11 +116,26 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @include media(laptop){
+      margin-top: 0;
+      flex-direction: row;
+      gap: 48px;
+    }
+  }
+
+  .navlink-list li{
+    display: contents;
   }
 
   .navlink {
     font-weight: 400;
     font-size: 18px;
+
+    @include media(laptop){
+      display: grid;
+      place-content: center;
+    }
   }
 
   .call-to-action {
@@ -97,5 +149,9 @@
     border-radius: var(--border-radius-md);
     font-weight: 700;
     font-size: 16px;
+
+    @include media(laptop){
+      margin-top: 0;
+    }
   }
 }
