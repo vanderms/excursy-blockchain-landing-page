@@ -1,5 +1,6 @@
 @use './partials/html';
 @use './partials/components/navbar';
 @use './partials/sections/header';
-@use './partials/sections/section-companies';
-@use './partials/sections/section-about';
+@use './partials/sections/companies';
+@use './partials/sections/about';
+@use './partials/sections/interests';

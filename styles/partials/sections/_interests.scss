@@ -1,0 +1,64 @@
+@use '../mixins' as *;
+
+.nv__section-our-interests {
+  margin-top: 48px;
+  @include container;
+
+  .title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--dark-black);
+    text-align: center;
+  }
+
+  .description {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 180%;
+    text-align: center;
+    color: var(--dark-gray);
+  }
+
+  .card-group {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+}
+
+.nv__section-our-interests .card {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  padding: 24px;
+  column-gap: 16px;
+
+  &__wrapper-image {
+    grid-area: 1 / 1 / 4 / 1;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--dark-black);
+  }
+
+  &__description {
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 180%;
+    color: var(--dark-gray);
+  }
+
+  &__cta {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 180%;
+    color: var(--primary);
+  }
+}

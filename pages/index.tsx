@@ -4,6 +4,7 @@ import { Navbar } from '../components/navbar/navbar';
 import { Header } from '../components/sections/header/header';
 import { SectionCompanies } from '../components/sections/companies/companies';
 import { SectionAbout } from '../components/sections/about/about';
+import { SectionOurInterests } from '../components/sections/interests/interests';
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +17,8 @@ const Home: NextPage = () => {
       <main>
         <Header />
         <SectionCompanies />
-        <SectionAbout/>
+        <SectionAbout />
+        <SectionOurInterests/>
       </main>
       
     </>
