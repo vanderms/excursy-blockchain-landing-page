@@ -1,0 +1,49 @@
+@use '../mixins' as *;
+
+
+.nv__section-our-values {
+  padding-top: 48px;
+  @include container;
+
+
+  .wrapper-image {
+    max-width: 514px;
+    margin-inline: auto;
+  }
+
+  .title {
+    margin-top: 16px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--dark-black);
+    text-align: center;
+  }
+
+  .description {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 180%;
+    color: var(--dark-gray);
+    text-align: center;
+  }
+
+  .cta {
+    margin: 32px auto 0;
+    width: 160px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: var(--border-radius-md);
+  }
+
+
+
+
+
+
+}

@@ -5,6 +5,7 @@ import { Header } from '../components/sections/header/header';
 import { SectionCompanies } from '../components/sections/companies/companies';
 import { SectionAbout } from '../components/sections/about/about';
 import { SectionOurInterests } from '../components/sections/interests/interests';
+import { SectionOurValues } from '../components/sections/ values/values';
 
 const Home: NextPage = () => {
   return (
@@ -18,9 +19,9 @@ const Home: NextPage = () => {
         <Header />
         <SectionCompanies />
         <SectionAbout />
-        <SectionOurInterests/>
-      </main>
-      
+        <SectionOurInterests />
+        <SectionOurValues/>
+      </main>      
     </>
   )
 }
