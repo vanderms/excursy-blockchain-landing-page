@@ -4,12 +4,26 @@
   margin-top: 48px;
   @include container;
 
+  @include media(tablet) {
+    margin-top: 80px;
+  }
+
+  @include media(laptop){
+    margin-top: 160px;
+  }
+
   .title {
     font-weight: 800;
     font-size: 24px;
     line-height: 130%;
     color: var(--dark-black);
     text-align: center;
+    max-width: 765px;
+    margin-inline: auto;
+
+    @include media(laptop) {
+      font-size: 52px;      
+    }
   }
 
   .description {
@@ -19,15 +33,26 @@
     line-height: 180%;
     text-align: center;
     color: var(--dark-gray);
+    max-width: 765px;
+    margin-inline: auto;
+
+    @include media(laptop){
+      font-size: 20px;
+    }
   }
 
-  .card-group {
+  .cards-group {
     margin-top: 18px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 24px;
-  }
 
+    @include media(laptop){
+      margin-top: 65px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
 }
 
 .nv__section-our-interests .card {
@@ -36,8 +61,16 @@
   padding: 24px;
   column-gap: 16px;
 
+  @include media(laptop){
+    grid-template-columns: 1fr;
+  }
+
   &__wrapper-image {
     grid-area: 1 / 1 / 4 / 1;
+
+    @include media(laptop){
+      grid-area: initial;
+    }
   }
 
   &__title {
@@ -45,6 +78,11 @@
     font-size: 18px;
     line-height: 25px;
     color: var(--dark-black);
+
+    @include media(laptop){
+      margin-top: 24px;
+      font-size: 28px;
+    }
   }
 
   &__description {
@@ -52,6 +90,11 @@
     font-size: 12px;
     line-height: 180%;
     color: var(--dark-gray);
+
+    @include media(laptop){
+      margin-top: 24px;
+      font-size: 18px;
+    }
   }
 
   &__cta {
@@ -60,5 +103,10 @@
     font-size: 14px;
     line-height: 180%;
     color: var(--primary);
+
+    @include media(laptop){
+      margin-top: 32px;
+      font-size: 18px;
+    }
   }
 }
