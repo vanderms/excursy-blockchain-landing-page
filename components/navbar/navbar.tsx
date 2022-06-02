@@ -13,14 +13,14 @@ export const Navbar: React.FC = () => {
       <Link href='/'>
         <a className="logo">
           <div className="wrapper-image">
-            <Image width={76} height={76} src='/assets/logo.svg'></Image>
+            <Image width={76} height={76} src='/assets/logo.svg' alt=''/>
           </div>
           <span>Excursy</span>
         </a>
       </Link>
       <div className="sidebar-mobile" data-open={sidebar.open}>
         <button className="close-btn" aria-label="close sidebar menu" onClick={closeSidebar}>
-          <Image src='/assets/icon/close.svg' width={20} height={20}></Image>
+          <Image src='/assets/icon/close.svg' width={20} height={20} alt='' />
         </button>       
         <ul className="navlink-list">
           <li><Link href='/'><a className="navlink">Home</a></Link></li>
@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
       </div>
       <div className="backdrop" data-open={sidebar.open} onClick={closeSidebar}></div>
       <button className="btn-menu" aria-label="menu" onClick={openSidebar}>
-        <Image src='/assets/icon/hamburger.svg' width={29} height={24}></Image>
+        <Image src='/assets/icon/hamburger.svg' width={29} height={24} alt=''/>
       </button>
     </nav>
   )

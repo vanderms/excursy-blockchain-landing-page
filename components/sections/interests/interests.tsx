@@ -4,7 +4,7 @@ export const SectionOurInterests: React.FC = () => {
   return (
     <section className="nv__section-our-interests" id='our-interests'>
       <h2 className="title">Our Interests</h2>
-      <p className="description">It's the norm these days to lay out a roadmap that gives stakeholders an indication of the direction that the project aspires to go. Inspired by Elon Musk's 2006 masterplan, these are our skeleton ambitions.</p>
+      <p className="description">It&lsquo;s the norm these days to lay out a roadmap that gives stakeholders an indication of the direction that the project aspires to go. Inspired by Elon Musk&lsquo;s 2006 masterplan, these are our skeleton ambitions.</p>
       <div className="cards-group">
         <Card
           title="Blockchain product"
