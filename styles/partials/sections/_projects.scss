@@ -1,0 +1,57 @@
+@use '../mixins' as *;
+
+
+.nv__section-projects {
+  margin-top: 48px;
+  @include container;
+
+  .title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--dark-black);
+    text-align: center;
+  }
+
+  .container-card {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.nv__section-projects .card {
+
+  &__wrapper-image {
+    position: relative;
+    padding-bottom: 79.88%;
+  }
+
+  &__title {
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--dark-black);
+  }
+
+  &__summary {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 180%;
+    color: var(--dark-gray);
+  }
+
+
+  &__cta {
+    display: block;
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--primary);
+  }
+
+}
