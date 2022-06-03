@@ -2,8 +2,16 @@
 
 
 .nv__section-projects {
-  margin-top: 48px;
+  padding-top: 48px;
   @include container;
+
+  @include media(tablet){
+    padding-top: 80px;
+  }
+
+  @include media(laptop){
+    padding-top: 160px;
+  }
 
   .title {
     font-weight: 800;
@@ -11,13 +19,26 @@
     line-height: 130%;
     color: var(--dark-black);
     text-align: center;
+
+    @include media(laptop){
+      font-size: 52px;
+    }
   }
 
   .container-card {
     margin-top: 24px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 40px;
+
+    @include media(tablet){
+      margin-top: 36px;
+    }
+
+    @include media(laptop){
+      margin-top: 80px;
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
@@ -26,6 +47,10 @@
   &__wrapper-image {
     position: relative;
     padding-bottom: 79.88%;
+
+    @include media(laptop){
+      padding-bottom: 98%;
+    }
   }
 
   &__title {
@@ -34,6 +59,11 @@
     font-size: 24px;
     line-height: 150%;
     color: var(--dark-black);
+
+    @include media(laptop){
+      margin-top: 32px;
+      font-size: 28px;
+    }
   }
 
   &__summary {
@@ -42,8 +72,12 @@
     font-size: 12px;
     line-height: 180%;
     color: var(--dark-gray);
-  }
 
+    @include media(laptop){
+      margin-top: 24px;
+      font-size: 20px;
+    }
+  }
 
   &__cta {
     display: block;
@@ -52,6 +86,10 @@
     font-size: 16px;
     line-height: 22px;
     color: var(--primary);
-  }
 
+    @include media(laptop){
+      margin-top: 24px;
+      font-size: 20px;
+    }
+  }
 }
