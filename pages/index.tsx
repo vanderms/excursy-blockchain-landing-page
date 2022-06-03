@@ -7,6 +7,7 @@ import { SectionAbout } from '../components/sections/about/about';
 import { SectionOurInterests } from '../components/sections/interests/interests';
 import { SectionOurValues } from '../components/sections/ values/values';
 import { SectionProjects } from '../components/sections/projects/projects';
+import { Footer } from '../components/sections/footer/footer';
 
 const Home: NextPage = () => {
   return (
@@ -22,7 +23,8 @@ const Home: NextPage = () => {
         <SectionAbout />
         <SectionOurInterests />
         <SectionOurValues />
-        <SectionProjects/>
+        <SectionProjects />
+        <Footer/>
       </main>      
     </>
   )
