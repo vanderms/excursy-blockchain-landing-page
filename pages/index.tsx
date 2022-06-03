@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Excursy - Blockchain Tech</title>       
-        <link rel="icon" type="image/png" href="./ico.png" />
+        
       </Head>
       <Navbar />
       <main>
