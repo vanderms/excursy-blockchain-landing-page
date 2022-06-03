@@ -10,24 +10,29 @@ import { SectionProjects } from '../components/sections/projects/projects';
 import { Footer } from '../components/sections/footer/footer';
 
 const Home: NextPage = () => {
+  
+  const name = "Excursy - Blockchain tech";
+  const title = name;
+  const description = "Excursy is a landing page designed for blockchain tech companies";
+  const url = "https://precious-platypus-443963.netlify.app/";
+
   return (
     <>
       <Head>     
         {/* <!-- Site Name, Title, and Description to be displayed --> */}
         <meta
           property="og:site_name"
-          content="Excursy - Blockchain tech"
+          content={ name }
         />
-        <meta property="og:title" content="Pod Request Landing Page" />
+        <meta property="og:title" content={ title } />
         <meta
           property="og:description"
-          content="Excursy is a landing page designed for blockchain tech companies"
+          content={ description }
         />
         {/* <!-- Image to display -->  */}
-        {/* <!-- Replace   «example.com/image01.jpg» with your own -->  */}
         <meta
           property="og:image"
-          content="https://precious-platypus-443963.netlify.app/preview.jpg"
+          content={ url + "preview.jpg" }
         />
 
         {/* <!-- No need to change anything here -->  */}
@@ -37,10 +42,10 @@ const Home: NextPage = () => {
         {/* <!-- Website to visit when clicked social medias-->  */}
         <meta
           property="og:url"
-          content="https://precious-platypus-443963.netlify.app/"
-        ></meta>
+          content={ url }
+        ></meta>  
         
-        <title>Excursy - Blockchain Tech</title>       
+        <title>{ title }</title>       
         
       </Head>
       <Navbar />
